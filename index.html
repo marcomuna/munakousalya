@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muna Kousalya | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaina+2:wght@400..800&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav">
+    <!-- for desktop view  -->
+    <ul>
+      <li><a href="#"><img src="assets/logo.png" alt="logo" style="width: 5rem;"></a></li>
+      <li class="hideOnMobile"><a href="#hero">Home</a></li>
+      <li class="hideOnMobile"><a href="#about">About</a></li>
+      <li class="hideOnMobile"><a href="#skill">skill</a></li>
+      <li class="hideOnMobile"><a href="#project">Projects</a></li>
+      <li class="hideOnMobile"><a href="#service">Service</a></li>
+      <li class="hideOnMobile"><a href="#contact">contact</a></li>
+      <li class="hideOnMobile"><a href="#"><i class="fa-solid fa-moon"></i></a></li>
+      <li class="menuBtn" onclick=showSidebar()><i class="fa-solid fa-bars"></i></li>
+    </ul>
+    <!-- for mobile view  -->
+    <ul class="sidebar">
+      <li onclick=hideSidebar() class="menuBtn"><i class="fa-solid fa-xmark"></i></li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skill">skill</a></li>
+      <li><a href="#project">Projects</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#contact">contact</a></li>
+      <li><a href="#"><i class="fa-solid fa-moon"></i></a></li>
+    </ul>
+    </div>
+  </nav>
+  <main>
+    <section class="hero vw90" id="hero">
+      <div class="typewritter">
+        <p class="greeting">Hii</p>
+        <h1>I'am Muna</h1>
+        <h1>a Software Developer</h1>
+      </div>
+      <p class="quotes">I'm <span><b>MuNa</b></span> - a Software Developer
+        crafting scalable, user-focused digital
+        experiences through modern
+        technologies, clean design, and
+        innovative problem-solving.</p>
+      <div class="sphere"></div>
+      <img src="/assets/profile-img.png" alt="profile image">
+      <div class="cta-container">
+        <button class="btn primary"><a href="/assets/CV.pdf" target="_blank">View CV</a></button>
+        <button class="btn secondary"><a href="#contact">Hire Me</a></button>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="Card">MERN Stack</div>
+          <div class="Card">Flutter</div>
+          <div class="Card">3D Interion</div>
+          <div class="Card">UI/UX</div>
+          <div class="Card">PWA</div>
+          <div class="Card">System Design</div>
+          <div class="Card">Blender 3D</div>
+          <div class="Card">DevOpes</div>
+          <div class="Card">Muna</div>
+          <div class="Card">Blender 3D</div>
+          <div class="Card">DevOpes</div>
+          <div class="Card">Muna</div>
+          <!-- dupdivcate  -->
+          <div class="Card">MERN Stack</div>
+          <div class="Card">Flutter</div>
+          <div class="Card">3D Interion</div>
+          <div class="Card">UI/UX</div>
+          <div class="Card">PWA</div>
+          <div class="Card">System Design</div>
+          <div class="Card">Blender 3D</div>
+          <div class="Card">DevOpes</div>
+          <div class="Card">Muna</div>
+          <div class="Card">Blender 3D</div>
+          <div class="Card">DevOpes</div>
+          <div class="Card">Muna</div>
+        </div>
+      </div>
+    </section>
+    <!-- =================================================================== -->
+    <!-- About Section -->
+    <!-- =================================================================== -->
+    <section class="about vw90" id="about">
+      <div class="aboutimg">
+        <img src="/assets/about image.png" alt="about image">
+        <div class="aboutLink">
+          <a href="https://github.com/" class="github" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.youtube.com/" class="youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/in/muna-kousalya/" class="linkedin" target="_blank"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/serenity__de_m_on/" class="instagram" target="_blank"><i
+              class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="summery">
+        <h1><b>About</b> me</h1>
+        <h3>Muna Kousalya - <b>Software Developer</b></h3>
+        <p>I am a passionate and results-driven B.Tech Computer Science student at MITS Rayagada. Skilled in building
+          scalable web and mobile applications using MERN Stack and Flutter development, I focus on high-performance
+          architecture, modern UI/UX, and innovative problem-solving. With expertise in React, Node.js, Firebase,
+          MongoDB, and modern animation frameworks, I create responsive, user-centric digital experiences with a strong
+          attention to performance and design.<br>
+          Beyond development, I am deeply interested in startup innovation, system design, and creative technology. My
+          strengths include adaptability, product thinking, and continuous learning, complemented by interests in UI/UX
+          and 3D design using Blender. I aim to deliver impactful solutions while growing as a versatile full-stack
+          developer and creative technologist.
+        </p>
+        <section class="timeline">
+          <div class="timeline-items">
+            <!-- BTECH -->
+            <div class="timeline-item">
+              <div class="timeline-card">
+                <h3>MITS Rayagada</h3>
+                <p><strong>Degree:</strong> B.Tech CSE</p>
+                <p><strong>Year:</strong> 2024 - 2028</p>
+                <p><strong>Status:</strong> Pursuing 5<sup>th</sup>Sem</p>
+              </div>
+              <h2 class="timeline-title">B.Tech</h2>
+              <div class="timeline-dot"></div>
+              <span class="timeline-year">(2024-2028)</span>
+            </div>
+            <!-- 12TH -->
+            <div class="timeline-item">
+              <div class="timeline-card">
+                <h3>OAV Kolnara</h3>
+                <p><strong>Class:</strong> 12th Science</p>
+                <p><strong>Year:</strong> 2023</p>
+                <p><strong>Marks:</strong> 59%</p>
+              </div>
+              <h2 class="timeline-title">12<sup>th</sup></h2>
+              <div class="timeline-dot"></div>
+              <span class="timeline-year">(2023)</span>
+            </div>
+            <!-- 10TH -->
+            <div class="timeline-item">
+              <div class="timeline-card">
+                <h3>OAV Kalyanasingpur</h3>
+                <p><strong>Class:</strong> 10th</p>
+                <p><strong>Year:</strong> 2021</p>
+                <p><strong>Marks:</strong> 82%</p>
+              </div>
+              <h2 class="timeline-title">10<sup>th</sup></h2>
+              <div class="timeline-dot"></div>
+              <span class="timeline-year">(2021)</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </section>
+    <!-- =================================================================== -->
+    <!-- Skill Section -->
+    <!-- =================================================================== -->
+    <section class="skill vw90" id="skill">
+      <h1>this is skill page</h1>
+    </section>
+    <!-- =================================================================== -->
+    <!-- Project Section -->
+    <!-- =================================================================== -->
+    <section class="project vw90" id="project">
+      <div class="secHead">
+        <h1>my <b>Project's</b></h1>
+        <p>An innovative project combining creativity, precision, and thoughtful problem-solving. Focused on strong
+          visual
+          storytelling and structured execution. Created to inspire and provide real-world value.</p>
+      </div>
+      <div class="secContainer">
+        <div class="card">
+          <h2>Web Design</h2>
+          <img src="/assets/web design.svg" alt="web design">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus officia tempora temporibus
+            commodi, fugit quas labore omnis sequi deleniti esse.</p>
+        </div>
+        <div class="card">
+          <h2>App Design</h2>
+          <img src="/assets/web design.svg" alt="web design">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus officia tempora temporibus
+            commodi, fugit quas labore omnis sequi deleniti esse.</p>
+        </div>
+        <div class="card">
+          <h2>3D Design</h2>
+          <img src="/assets/web design.svg" alt="web design">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus officia tempora temporibus
+            commodi, fugit quas labore omnis sequi deleniti esse.</p>
+        </div>
+      </div>
+    </section>
+    <!-- =================================================================== -->
+    <!-- service Section -->
+    <!-- =================================================================== -->
+    <section class="service vw90" id="service">
+      <div class="secHead">
+        <h1>my <b>Service</b></h1>
+        <p>Design and developing digital product that are simple,smart and inpactful.</p>
+      </div>
+      <div class="secContainer">
+        <div class="card">
+          <h2>Web Design</h2>
+          <img src="/assets/web design.svg" alt="web design">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus officia tempora temporibus
+            commodi, fugit quas labore omnis sequi deleniti esse.</p>
+        </div>
+        <div class="card">
+          <h2>App Design</h2>
+          <img src="/assets/web design.svg" alt="web design">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus officia tempora temporibus
+            commodi, fugit quas labore omnis sequi deleniti esse.</p>
+        </div>
+        <div class="card">
+          <h2>3D Design</h2>
+          <img src="/assets/web design.svg" alt="web design">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus officia tempora temporibus
+            commodi, fugit quas labore omnis sequi deleniti esse.</p>
+        </div>
+      </div>
+    </section>
+    <!-- =================================================================== -->
+    <!-- contact Section -->
+    <!-- =================================================================== -->
+    <section class="contact vw90" id="contact">
+      <h1>Have an Awsome Project,Idea <br><b>Let's Discus</b></h1>
+      <form action="#">
+        <input type="text" name="name" placeholder="Enter your full Name.." required>
+        <input type="email" name="email" placeholder="Enter your Email ID.." required>
+        <textarea name="message" placeholder="Enter your query.." rows="5" cols="30" required></textarea>
+        <div class="btnContainer">
+          <input type="tel" name="phone" placeholder="Enter Phone no" maxlength="10" pattern="[0-9]{10}" id="phone">
+          <button class="sendbtn">Send</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <!-- ===================================================================== -->
+  <!-- ===================================================================== -->
+  <!-- footer -->
+  <!-- ===================================================================== -->
+  <!-- ===================================================================== -->
+  <footer>
+    <div class="footer">
+      <div class="footerHead">
+        <h1>Let's connect there</h1>
+        <a href="#contact">
+          <button class="hirebtn">Hire Me</button>
+        </a>
+      </div>
+      <hr>
+      <div class="footerMid">
+        <div class="card1">
+          <a href="#hero"><img src="/assets/logo.png" alt="footer logo"></a>
+          <p>Crafting clean design and scalable digital solutions.
+            Passionate about development, creativity, and
+            continuous growth.
+            Built with dedication by MuNa.</p>
+          <div class="link">
+
+            <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/muna-kousalya/" target="_blank"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/serenity__de_m_on/" target="_blank"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/919040405798?text=Hello%20Muna%2C%20I%20want%20to%20hire%20you" target="_blank"><i
+                class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="card2">
+          <h3>Contact</h3>
+          <a
+            href="mailto:blacksdevil2004@gmail.com?subject=HiringInquiry&body=Hello%20Muna,%20I%20want%20to%20hire%20you.">
+            <i class="fa-solid fa-envelope"></i>blacksdevil2004@gmail.com</a>
+          <a href="tel:919040405798"><i class="fa-solid fa-phone"></i> 9040405798</a>
+          <a href="https://interior.munakousalya.online"><i class="fa-solid fa-globe"></i> Interior Design</a>
+        </div>
+      </div>
+      <hr>
+      <div class="footerLast">
+
+        <p>User Terms & Conditions | Privacy Policy <br><br>
+          &copy; 2026 MuNa - All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
