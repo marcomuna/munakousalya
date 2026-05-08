@@ -312,7 +312,8 @@ nav li:first-child {
 
 .Card {
   flex: 0 0 auto;
-  width: 150px;
+  /* width: 150px; */
+  margin: 0 10px;
   height: 40px;
   display: flex;
   align-items: center;
