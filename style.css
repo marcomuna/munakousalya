@@ -360,6 +360,7 @@ nav li:first-child {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 5px;
   border-radius: 30px;
 }
@@ -402,7 +403,7 @@ nav li:first-child {
   align-items: flex-start;
   width: 40rem;
   height: 40rem;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 .summery h1 {
   font-size: 3rem;
@@ -539,7 +540,7 @@ nav li:first-child {
 .project {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 86vh;
   margin-bottom: 10rem;
   background-position: center;
   background-size: cover;
@@ -582,7 +583,7 @@ nav li:first-child {
 .service {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 80vh;
   background: url(/assets/service.png);
   background-position: center;
   background-size: cover;
@@ -1139,99 +1140,112 @@ DESKTOP UI REMAINS SAME */
 }
 
 /* ========================================================================== */
-/* About */
+/* About Responsive */
 /* ========================================================================== */
-/* responsiveness  */
+
 @media (max-width: 800px) {
-  .about {
+
+  .about{
     width: 100%;
     height: auto;
-    padding: 0rem 2rem;
+    padding: 2rem 0;
     display: flex;
     flex-direction: column-reverse;
-    align-items: self-start;
-    justify-content: flex-start;
-    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     overflow: hidden;
   }
 
-  .aboutimg {
+  .summery{
     width: 90%;
-    padding: 0.5rem;
-    box-sizing: border-box;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .aboutimg img {
+  .summery h1{
+    width: 100%;
+    font-size: 2.7rem;
+    text-align: center;
+  }
+
+  .summery h3{
+    width: 100%;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .summery p{
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: start;
+  }
+
+  .aboutimg{
     width: 90%;
-    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+  }
+
+  .aboutimg img{
+    width: 85%;
+    max-width: 300px;
     height: auto;
     object-fit: cover;
     border-radius: 25px;
   }
 
-  .summery {
+  .aboutLink{
     width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0 4.5rem 0 0;
-    box-sizing: border-box;
-  }
-
-  .summery h1 {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .summery h3 {
-    font-size: 1.4rem;
-  }
-
-  .summery p {
-    font-size: 1rem;
-    line-height: 1.5;
-    word-break: break-word;
-  }
-
-  .timeline {
-    width: 100%;
-    padding: 1rem 10px;
-  }
-
-  .timeline-items {
-    gap: 0.5rem;
-  }
-
-  .timeline-title {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .timeline-year {
-    font-size: 0.9rem;
-    text-align: center;
-  }
-
-  .timeline-card {
-    width: 140px;
-    padding: 8px;
-  }
-
-  .timeline-card h3 {
-    font-size: 0.9rem;
-  }
-
-  .timeline-card p {
-    font-size: 0.8rem;
-  }
-
-  .aboutLink {
-    width: 100%;
+    display: flex;
     justify-content: center;
     gap: 2rem;
     margin-top: 1rem;
   }
-}
 
+  /* timeline */
+
+  .timeline{
+    width: 70%;
+    padding: 1rem 0;
+  }
+
+  .timeline-items{
+    gap: 0.5rem;
+  }
+
+  .timeline-title{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .timeline-year{
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .timeline-card{
+    width: 140px;
+    padding: 8px;
+  }
+
+  .timeline-card h3{
+    font-size: 0.9rem;
+  }
+
+  .timeline-card p{
+    font-size: 0.8rem;
+  }
+}
 /* ========================================================================== */
 /* Project */
 /* ========================================================================== */
@@ -1285,7 +1299,7 @@ DESKTOP UI REMAINS SAME */
   }
   .card {
     width: 90vw;
-    height: 60vh;
+    height: 50vh;
   }
   .card img {
     width: 70vw;
