@@ -6,7 +6,9 @@
   --linearBackground: linear-gradient(135deg, #7da8ff8e, #8eb1e273, #ec8cff78);
   --linearBackgroundBlue: linear-gradient(135deg, #4f8cff, #1e5eff);
 }
-
+html{
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
