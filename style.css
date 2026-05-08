@@ -152,7 +152,7 @@ nav li:first-child {
   .sidebar {
     width: 100%;
   }
-  nav{
+  nav {
     position: sticky;
     top: 0;
   }
@@ -200,11 +200,11 @@ nav li:first-child {
 }
 .typewritter h1 {
   font-size: 5rem;
-  line-height: 1;
+  line-height: 1.2;
 }
 .quotes {
   width: 35vw;
-  margin-top: 5rem;
+  margin-top: 2rem;
   font-size: 1.5rem;
   text-wrap: wrap;
   font-weight: bold;
@@ -213,7 +213,33 @@ nav li:first-child {
   color: var(--blue);
   font-size: 2rem;
 }
+/* ================================================= */
+/* TYPEWRITER EFFECT */
+/* ================================================= */
+#typing{
+  position: relative;
+  display: inline-block;
+  padding-right: 6px;
+  color: var(--blue);
+}
 
+#typing::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 80%;
+  background: black;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+  50%{
+    border-color: transparent;
+  }
+}
 /* Container */
 .cta-container {
   display: flex;
@@ -491,6 +517,17 @@ nav li:first-child {
   font-size: 16px;
   line-height: 1.5;
   color: #374151;
+}
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+/* Skill page */
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+.skill {
+  height: 85vh;
+  background-color: #1e5eff;
 }
 /* ========================================================================== */
 /* ========================================================================== */
@@ -805,7 +842,6 @@ DESKTOP UI REMAINS SAME */
     padding: 50px 6%;
   }
 
-
   .navlinks {
     position: fixed;
     top: 80px;
@@ -826,10 +862,10 @@ DESKTOP UI REMAINS SAME */
   .hamburger {
     display: flex;
   }
-nav{
-  position: sticky;
-  top: 0;
-}
+  nav {
+    position: sticky;
+    top: 0;
+  }
   .home,
   .about,
   .contact,
@@ -862,7 +898,7 @@ nav{
     text-align: center;
     height: auto;
   }
-  .summery h1{
+  .summery h1 {
     text-align: center;
   }
   .homeimg img,
@@ -871,7 +907,6 @@ nav{
     max-width: 100%;
     height: auto;
   }
-
 
   h1 {
     font-size: 2.2rem;
@@ -935,14 +970,14 @@ nav{
   section {
     padding: 40px 5%;
   }
-  .cta-container .btn.primary{
+  .cta-container .btn.primary {
     padding: 0 25px;
   }
   .about {
     display: flex;
     flex-direction: column-reverse;
   }
-  .summery h1{
+  .summery h1 {
     text-align: center;
   }
   .homeimg img,
@@ -992,7 +1027,7 @@ nav{
   .navbar {
     padding: 15px 5%;
   }
-.cta-container .btn.primary{
+  .cta-container .btn.primary {
     padding: 0 25px;
   }
   .home,
@@ -1058,7 +1093,6 @@ nav{
   }
 }
 
-
 /* ========================================================================== */
 /* Home */
 /* ========================================================================== */
@@ -1068,8 +1102,8 @@ nav{
     align-items: center;
     justify-content: center;
   }
-  .hero{
-    height:65vh;
+  .hero {
+    height: 65vh;
   }
   .greeting {
     font-size: 1.2rem;
@@ -1109,7 +1143,6 @@ nav{
 /* ========================================================================== */
 /* responsiveness  */
 @media (max-width: 800px) {
-
   .about {
     width: 100%;
     height: auto;
@@ -1197,7 +1230,6 @@ nav{
     gap: 2rem;
     margin-top: 1rem;
   }
-
 }
 
 /* ========================================================================== */
