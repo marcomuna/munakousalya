@@ -6,7 +6,7 @@
   --linearBackground: linear-gradient(135deg, #7da8ff8e, #8eb1e273, #ec8cff78);
   --linearBackgroundBlue: linear-gradient(135deg, #4f8cff, #1e5eff);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 * {
@@ -22,6 +22,7 @@ body {
   font-family: var(--primary);
   background-color: lightcyan;
   background: var(--linearBackground);
+  overflow-x: hidden;
 }
 
 /* hide scrollbar  */
@@ -180,6 +181,8 @@ nav li:first-child {
 .hero {
   height: 100vh;
   scroll-margin-top: 130px;
+  position: relative;
+  overflow: hidden;
 }
 .sphere {
   position: absolute;
@@ -196,6 +199,7 @@ nav li:first-child {
   position: absolute;
   bottom: 2em;
   right: 10em;
+  right: 5%;
 }
 .greeting {
   font-size: 2rem;
@@ -218,14 +222,14 @@ nav li:first-child {
 /* ================================================= */
 /* TYPEWRITER EFFECT */
 /* ================================================= */
-#typing{
+#typing {
   position: relative;
   display: inline-block;
   padding-right: 6px;
   color: var(--blue);
 }
 
-#typing::after{
+#typing::after {
   content: "";
   position: absolute;
   right: 0;
@@ -237,8 +241,8 @@ nav li:first-child {
   animation: blink 0.7s infinite;
 }
 
-@keyframes blink{
-  50%{
+@keyframes blink {
+  50% {
     border-color: transparent;
   }
 }
@@ -250,7 +254,8 @@ nav li:first-child {
   padding: 6px;
   border-radius: 50px;
   position: absolute;
-  left: 35rem;
+  /* left: 35rem; */
+  left: 50%;
   bottom: 6rem;
   /* Glass effect */
   background: rgba(255, 255, 255, 0.1);
@@ -530,9 +535,164 @@ nav li:first-child {
 /* ========================================================================== */
 /* ========================================================================== */
 .skill {
-  height: 85vh;
-  background-color: #1e5eff;
+  height: max-content;
 }
+.skills-title {
+  text-align: center;
+}
+.skills-title h1 {
+  font-size: 2.7rem;
+}
+.skills-title p {
+  font-size: 1.5rem;
+}
+.skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.skill-card {
+  padding: 30px;
+  height: 19rem;
+  width: max-content;
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  margin: 10px;
+  border: 2px solid black;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(to right, #5d6bff, #a64dff);
+}
+@media (max-width: 768px) {
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    grid-template-columns: 1fr;
+    width: 90vw;
+  }
+  .skill-card {
+    width: 16rem;
+  }
+}
+/* ========================================================================== */
+/* slill corusel  */
+/* ========================================================================== */
+.tools {
+  text-align: center;
+  margin: 10px 0;
+}
+.skill-carousel {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.carousel-row {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track-skill {
+  display: flex;
+  width: max-content;
+  gap: 10px;
+  animation: scrollLeft 20s linear infinite;
+}
+
+.carousel-track-skill.reverse {
+  animation: scrollRight 20s linear infinite;
+}
+
+.skill-box {
+  width: max-content;
+  padding: 0 15px;
+  height: 43px;
+  background-color: #bed0fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: 0.3s ease;
+}
+
+.skill-box i {
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+}
+/* pause on hover */
+.carousel-row:hover .carousel-track-skill {
+  animation-play-state: paused;
+}
+/* animations */
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* ========================================================================== */
 /* ========================================================================== */
 /* ========================================================================== */
@@ -1143,12 +1303,22 @@ DESKTOP UI REMAINS SAME */
 }
 
 /* ========================================================================== */
+/* Skill Responsive */
+/* ========================================================================== */
+@media (max-width: 800px) {
+  .skills-title h1 {
+    font-size: 2rem;
+  }
+  .skills-title p {
+    font-size: 1rem;
+  }
+}
+/* ========================================================================== */
 /* About Responsive */
 /* ========================================================================== */
 
 @media (max-width: 800px) {
-
-  .about{
+  .about {
     width: 100%;
     height: auto;
     padding: 2rem 0;
@@ -1160,7 +1330,7 @@ DESKTOP UI REMAINS SAME */
     overflow: hidden;
   }
 
-  .summery{
+  .summery {
     width: 90%;
     height: auto;
     margin: 0;
@@ -1171,26 +1341,26 @@ DESKTOP UI REMAINS SAME */
     justify-content: center;
   }
 
-  .summery h1{
+  .summery h1 {
     width: 100%;
     font-size: 2.7rem;
     text-align: center;
   }
 
-  .summery h3{
+  .summery h3 {
     width: 100%;
     font-size: 1.7rem;
     text-align: center;
   }
 
-  .summery p{
+  .summery p {
     width: 100%;
     font-size: 1rem;
     line-height: 1.8;
     text-align: start;
   }
 
-  .aboutimg{
+  .aboutimg {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -1199,7 +1369,7 @@ DESKTOP UI REMAINS SAME */
     padding: 0.7rem;
   }
 
-  .aboutimg img{
+  .aboutimg img {
     width: 85%;
     max-width: 300px;
     height: auto;
@@ -1207,7 +1377,7 @@ DESKTOP UI REMAINS SAME */
     border-radius: 25px;
   }
 
-  .aboutLink{
+  .aboutLink {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1217,35 +1387,35 @@ DESKTOP UI REMAINS SAME */
 
   /* timeline */
 
-  .timeline{
+  .timeline {
     width: 70%;
     padding: 1rem 0;
   }
 
-  .timeline-items{
+  .timeline-items {
     gap: 0.5rem;
   }
 
-  .timeline-title{
+  .timeline-title {
     font-size: 1.5rem;
     text-align: center;
   }
 
-  .timeline-year{
+  .timeline-year {
     font-size: 0.9rem;
     text-align: center;
   }
 
-  .timeline-card{
+  .timeline-card {
     width: 140px;
     padding: 8px;
   }
 
-  .timeline-card h3{
+  .timeline-card h3 {
     font-size: 0.9rem;
   }
 
-  .timeline-card p{
+  .timeline-card p {
     font-size: 0.8rem;
   }
 }
@@ -1255,6 +1425,7 @@ DESKTOP UI REMAINS SAME */
 @media (max-width: 800px) {
   .project {
     margin-bottom: 0;
+    margin-top: 0;
   }
   .project .card {
     box-shadow: none;
