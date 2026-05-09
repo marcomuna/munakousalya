@@ -4,7 +4,14 @@ function showSidebar() {
 function hideSidebar() {
   const sidebar = (document.querySelector(".sidebar").style.display = "none");
 }
+/* Close sidebar after clicking menu links */
+const sidebarLinks = document.querySelectorAll(".sidebar a");
 
+sidebarLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    hideSidebar();
+  });
+});
 // =========================================================================
 // Typewrite effect
 // =========================================================================
