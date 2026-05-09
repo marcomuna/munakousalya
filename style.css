@@ -20,8 +20,7 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: var(--primary);
-  background-color: lightcyan;
-  background: var(--linearBackground);
+  background-color: white;
   overflow-x: hidden;
 }
 
@@ -90,13 +89,18 @@ nav a {
 }
 
 nav li:hover {
+  height: 40px;
+  background-color: var(--blue);
+  border-radius: 20px;
+}
+nav li a:hover{
   transform: scale(1.1);
+  color: white;
 }
 
 nav li:first-child {
   margin-right: auto;
 }
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -179,7 +183,7 @@ nav li:first-child {
 /* ========================================================================== */
 /* ========================================================================== */
 .hero {
-  height: 100vh;
+  height: 83vh;
   scroll-margin-top: 130px;
   position: relative;
   overflow: hidden;
@@ -187,7 +191,7 @@ nav li:first-child {
 .sphere {
   position: absolute;
   bottom: 0;
-  right: 6rem;
+  right: 0;
   width: 55vw;
   height: 30vw;
   border-top-left-radius: 500px;
@@ -197,8 +201,8 @@ nav li:first-child {
 .hero img {
   width: 45%;
   position: absolute;
-  bottom: 2em;
-  right: 10em;
+  bottom: 4em;
+  /* right: 10em; */
   right: 5%;
 }
 .greeting {
@@ -355,7 +359,7 @@ nav li:first-child {
 /* ========================================================================== */
 /* ========================================================================== */
 .about {
-  margin-top: 0;
+  margin-top: 40px;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -363,7 +367,6 @@ nav li:first-child {
   scroll-margin-top: 90px;
 }
 .aboutimg {
-  background-color: lightcyan;
   backdrop-filter: blur(18px);
   display: flex;
   flex-direction: column;
@@ -562,25 +565,37 @@ nav li:first-child {
   border-radius: 30px;
   backdrop-filter: blur(20px);
   margin: 10px;
-  border: 2px solid black;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  /* border: 1px solid black; */
 }
-.skill-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+.card-title{
+  text-align: center;
+  padding-bottom: 20px;
 }
-
+.middle-card{
+  width: 50%;
+}
+.box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-ul li{
+  list-style: "⭐ ";
+  cursor: pointer;
+}
+.skill-ul li:hover{
+  color: var(--blue);
+  transform: scale(1.1);
+}
 .skill-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+}
+.bar:hover{
+  transform: scale(1.05);
 }
 
 .bar {
@@ -615,10 +630,11 @@ nav li:first-child {
 /* ========================================================================== */
 .tools {
   text-align: center;
-  margin: 10px 0;
+  margin: 30px 0;
+  margin-top: 60px;
 }
 .skill-carousel {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -1267,12 +1283,14 @@ DESKTOP UI REMAINS SAME */
     justify-content: center;
   }
   .hero {
-    height: 65vh;
+    height: 60vh;
   }
   .greeting {
     font-size: 1.2rem;
+    position: absolute;
+    top: 0;
   }
-  .typewritter h1 {
+.typewritter h1 {
     font-size: 2rem;
     line-height: 1.3;
   }
@@ -1299,6 +1317,10 @@ DESKTOP UI REMAINS SAME */
     bottom: 23rem;
     left: 0;
     margin: 1rem;
+    border: 1px solid var(--blue);
+  }
+  .btn.secondary a{
+    color: black;
   }
 }
 
@@ -1306,12 +1328,29 @@ DESKTOP UI REMAINS SAME */
 /* Skill Responsive */
 /* ========================================================================== */
 @media (max-width: 800px) {
+  .middle-card{
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    width: 20rem;
+  }
+  .middle-card .card-title{
+    margin-left: 25px;
+  }
+  .skill-card{
+    height: max-content;
+  }
   .skills-title h1 {
     font-size: 2rem;
+    margin: 10px 0;
   }
   .skills-title p {
     font-size: 1rem;
   }
+  .card-title{
+    margin: 10px 0;
+  }
+
 }
 /* ========================================================================== */
 /* About Responsive */
