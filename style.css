@@ -1,10 +1,16 @@
 :root {
   --blue: #3170ff;
   --grey: #2e2e2e;
+  --white: #000000;
+  --black: #ffffff;
   --primary: sans-serif;
   --secondary: "Baloo Bhai 2", sans-serif;
   --linearBackground: linear-gradient(135deg, #7da8ff8e, #8eb1e273, #ec8cff78);
   --linearBackgroundBlue: linear-gradient(135deg, #4f8cff, #1e5eff);
+}
+body.dark{
+  --black: #000000;
+  --white: #ffffff;
 }
 html {
   scroll-behavior: smooth;
@@ -14,13 +20,18 @@ html {
   padding: 0;
   scroll-behavior: smooth;
   font-family: var(--secondary);
+   transition:
+    background-color 1s ease,
+    color 1s ease,
+    border-color 1s ease;
 }
 
 body {
   width: 100%;
   min-height: 100vh;
   font-family: var(--primary);
-  background-color: white;
+  background-color: var(--white);
+  background-color: var(--black);
   overflow-x: clip;
 }
 
@@ -57,7 +68,7 @@ a {
   width:30px;
   height:30px;
   border-radius:50%;
-  border:5px solid black;
+  border:5px solid var(--white);
   background-color: var(--blue);
   position:fixed;
   bottom: 0;
@@ -70,7 +81,7 @@ a {
 .loader a{
   font-size:35px;
   font-weight: bolder;
-  color:white;
+  color:var(--white);
 }
 /* ========================================================================== */
 /* Navigation */
@@ -97,6 +108,8 @@ nav ul {
 
 nav li {
   height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -105,17 +118,27 @@ nav a {
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: black;
+  color: var(--white);
+}
+.theme{
+  text-align: center;
+  border: none;
+  width:40px;
+  font-size: 1.5rem;
+  all: unset;
+  transition: 1s ease;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
-nav li:hover {
+nav li a:hover {
   height: 40px;
   background-color: var(--blue);
   border-radius: 20px;
 }
 nav li a:hover {
   transform: scale(1.1);
-  color: white;
+  color: var(--white);
 }
 
 nav li:first-child {
@@ -138,6 +161,9 @@ nav li:first-child {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+   transition:
+    right 1s ease,
+    opacity 1s ease;
 }
 
 .sidebar li {
@@ -231,6 +257,7 @@ nav li:first-child {
 .typewritter h1 {
   font-size: 5rem;
   line-height: 1.2;
+  color: var(--white);
 }
 .quotes {
   width: 35vw;
@@ -238,6 +265,7 @@ nav li:first-child {
   font-size: 1.5rem;
   text-wrap: wrap;
   font-weight: bold;
+  color: var(--white);
 }
 .quotes b {
   color: var(--blue);
@@ -261,7 +289,7 @@ nav li:first-child {
   transform: translateY(-50%);
   width: 6px;
   height: 80%;
-  background: black;
+  background: var(--blue);
   animation: blink 0.7s infinite;
 }
 
@@ -385,6 +413,7 @@ nav li:first-child {
   align-items: center;
   justify-content: space-between;
   scroll-margin-top: 90px;
+  color: var(--white);
 }
 .aboutimg {
   backdrop-filter: blur(18px);
@@ -409,14 +438,14 @@ nav li:first-child {
 }
 .aboutLink a {
   font-size: 1.7rem;
-  color: black;
+  color: var(--white);
 }
 .aboutLink a:hover {
   transform: scale(1.5);
   transition: all 0.5s ease-in-out;
 }
 .aboutLink .github:hover {
-  color: black;
+  color: var(--white);
 }
 .aboutLink .youtube:hover {
   color: red;
@@ -441,11 +470,12 @@ nav li:first-child {
 }
 .summery h3 {
   font-size: 1.8rem;
-  color: rgb(48, 48, 48);
+  color: var(--grey);
 }
 .summery p {
   font-size: 1.2rem;
   text-align: start;
+  color: var(--white);
 }
 
 /* education section  */
@@ -543,12 +573,12 @@ nav li:first-child {
 .timeline-card h3 {
   font-size: 16px;
   margin-bottom: 6px;
-  color: blue;
+  color: var(--blue);
 }
 .timeline-card p {
   font-size: 16px;
   line-height: 1.5;
-  color: #374151;
+  color: var(--white);
 }
 /* ========================================================================== */
 /* ========================================================================== */
@@ -559,6 +589,7 @@ nav li:first-child {
 /* ========================================================================== */
 .skill {
   height: max-content;
+  color: var(--white);
 }
 .skills-title {
   text-align: center;
@@ -568,6 +599,7 @@ nav li:first-child {
 }
 .skills-title p {
   font-size: 1.5rem;
+  color: var(--white);
 }
 .skills-container {
   display: flex;
@@ -586,13 +618,16 @@ nav li:first-child {
   backdrop-filter: blur(20px);
   margin: 10px;
   transition: all 0.3s ease;
+  color: var(--white);
   /* border: 1px solid black; */
 }
 .card-title {
   text-align: center;
   padding-bottom: 20px;
+  color: var(--white);
 }
 .middle-card {
+  color: var(--black);
   width: 50%;
 }
 .box-container {
@@ -603,6 +638,7 @@ nav li:first-child {
 .skill-ul li {
   list-style: "⭐ ";
   cursor: pointer;
+  color: var(--white);
 }
 .skill-ul li:hover {
   color: var(--blue);
@@ -624,7 +660,7 @@ nav li:first-child {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid black;
+  border: 1px solid var(--white);
 }
 
 .progress {
@@ -693,6 +729,7 @@ nav li:first-child {
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   transition: 0.3s ease;
+  color: black;
 }
 
 .skill-box i {
@@ -744,7 +781,7 @@ nav li:first-child {
   background-position: center;
   background-size: cover;
   border-radius: 30px;
-  color: black;
+  color: var(--white);
   scroll-margin-top: 20px;
 }
 .project .secContainer::-webkit-scrollbar {
@@ -767,7 +804,7 @@ nav li:first-child {
   margin-bottom: 10px;
 }
 .project .card p {
-  color: black;
+  color: var(--white);
 }
 .card {
   transition: all 0.3s ease;
@@ -860,6 +897,7 @@ nav li:first-child {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--white);
 }
 .contact h1 {
   font-family: var(--secondary);
@@ -960,11 +998,6 @@ input[type="submit"] {
 }
 .footer a:hover {
   color: white;
-}
-hr {
-  width: 80vw;
-  margin: auto;
-  color: red !important;
 }
 .footerHead {
   display: flex;

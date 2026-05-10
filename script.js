@@ -62,18 +62,27 @@ function typeEffect() {
 
 typeEffect();
 
-// =============================================================================
-// lenis added
-// =============================================================================
-const lenis = new Lenis({
-    duration: 1.2,
-    smoothWheel: true,
-    smoothTouch: false,
+  // ===========================================================================
+  // theme toggle
+  // ===========================================================================
+ const themes = document.querySelectorAll(".theme");
+
+themes.forEach(theme => {
+  theme.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+
+    const icon = theme.querySelector(".theme-icon");
+
+    if (document.body.classList.contains("dark")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+      icon.style.color = "white"
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+      icon.style.color = "black"
+    }
+
   });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
+});
