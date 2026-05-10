@@ -12,6 +12,12 @@ sidebarLinks.forEach(link => {
     hideSidebar();
   });
 });
+const sidebarButton = document.querySelectorAll(".theme");
+sidebarButton.forEach(button => {
+  button.addEventListener("click", () => {
+    hideSidebar();
+  });
+});
 // =========================================================================
 // Typewrite effect
 // =========================================================================
