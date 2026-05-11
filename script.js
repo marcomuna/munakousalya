@@ -137,3 +137,46 @@ form.addEventListener("submit", function(e){
     });
 
 });
+
+
+// =============================================================================
+// scroll animation
+// =============================================================================
+// ==========================================================================
+// Scroll Animation using Intersection Observer
+// ==========================================================================
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    // Show animation when element enters screen
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show");
+
+    }
+
+    // Remove animation when element leaves screen
+    else{
+
+      entry.target.classList.remove("show");
+
+    }
+
+  });
+
+},{
+  
+  // Animation starts when 15% visible
+  threshold: 0.15
+
+});
+
+// Select all animated elements
+const hiddenElements = document.querySelectorAll(
+  ".autoShow, .autoShowRight, .autoShowLeft"
+);
+
+// Observe each element
+hiddenElements.forEach((el) => observer.observe(el));
