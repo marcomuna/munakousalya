@@ -21,15 +21,15 @@
 <body>
   <nav class="nav">
     <!-- for desktop view  -->
-    <ul>
-      <li><a href="#"><img src="assets/logo.png" alt="logo" style="width: 5rem;"></a></li>
-      <li class="hideOnMobile"><a href="#hero">Home</a></li>
-      <li class="hideOnMobile"><a href="#about">About</a></li>
-      <li class="hideOnMobile"><a href="#skill">skill</a></li>
-      <li class="hideOnMobile"><a href="#project">Projects</a></li>
-      <li class="hideOnMobile"><a href="#service">Service</a></li>
-      <li class="hideOnMobile"><a href="#contact">contact</a></li>
-      <li class="hideOnMobile"><button class="theme"><i class="theme-icon fa-solid fa-moon"></i></button></li>
+    <ul class="">
+      <li class="loadLeft"><a href="#"><img src="assets/logo.png" alt="logo" style="width: 5rem;"></a></li>
+      <li class="hideOnMobile loadRight"><a href="#hero">Home</a></li>
+      <li class="hideOnMobile loadRight"><a href="#about">About</a></li>
+      <li class="hideOnMobile loadRight"><a href="#skill">skill</a></li>
+      <li class="hideOnMobile loadRight"><a href="#project">Projects</a></li>
+      <li class="hideOnMobile loadRight"><a href="#service">Service</a></li>
+      <li class="hideOnMobile loadRight"><a href="#contact">contact</a></li>
+      <li class="hideOnMobile loadRight"><button class="theme"><i class="theme-icon fa-solid fa-moon"></i></button></li>
       <li class="menuBtn" onclick=showSidebar()><i class="fa-solid fa-bars"></i></li>
     </ul>
     <!-- for mobile view  -->
@@ -47,26 +47,26 @@
   </nav>
   <main>
     <section class="hero vw90" id="hero">
-      <div class="typewritter">
-        <p class="greeting">Hii</p>
-        <h1>I'am Muna</h1>
-        <h1 class="type">
+      <div class="typewritter loadLeft">
+        <p class="greeting autoShowTop">Hii</p>
+        <h1 class="autoShowLeft">I'am Muna</h1>
+        <h1 class="type autoShowTop">
           A <span id="typing"></span>
         </h1>
       </div>
-      <p class="quotes">I'm <span><b>MuNa</b></span> - a Software Developer
+      <p class="quotes loadRight">I'm <span><b>MuNa</b></span> - a Software Developer
         crafting scalable, user-focused digital
         experiences through modern
         technologies, clean design, and
         innovative problem-solving.</p>
-      <div class="sphere"></div>
-      <img src="/assets/profile-img.png" alt="profile image">
-      <div class="cta-container">
+      <div class="sphere loadRight"></div>
+      <img src="/assets/profile-img.png" alt="profile image" class="loadRight">
+      <div class="cta-container loadBottom">
         <button class="btn primary"><a href="/assets/CV.pdf" target="_blank">View CV</a></button>
         <button class="btn secondary"><a href="#contact">Hire Me</a></button>
       </div>
 
-      <div class="carousel-container">
+      <div class="carousel-container loadBottom">
         <div class="carousel-track">
           <div class="Card">&#11088; Ready to Learn &#11088;</div>
           <div class="Card">&#11088; Open to Internship Opportunities &#11088;</div>
@@ -85,7 +85,7 @@
     <!-- About Section -->
     <!-- =================================================================== -->
     <section class="about vw90" id="about">
-      <div class="aboutimg">
+      <div class="aboutimg autoShowLeft">
         <img src="/assets/about image.png" alt="about image">
         <div class="aboutLink">
           <a href="https://github.com/" class="github" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -97,9 +97,9 @@
         </div>
       </div>
       <div class="summery">
-        <h1><b>About</b> me</h1>
+        <h1 class="autoShow"><b>About</b> me</h1>
         <h3>Muna Kousalya - <b>Software Developer</b></h3>
-        <p>I am a passionate and results-driven B.Tech Computer Science student at MITS Rayagada. Skilled in building
+        <p class="autoShow">I am a passionate and results-driven B.Tech Computer Science student at MITS Rayagada. Skilled in building
           scalable web and mobile applications using MERN Stack and Flutter development, I focus on high-performance
           architecture, modern UI/UX, and innovative problem-solving. With expertise in React, Node.js, Firebase,
           MongoDB, and modern animation frameworks, I create responsive, user-centric digital experiences with a strong
@@ -109,7 +109,7 @@
           and 3D design using Blender. I aim to deliver impactful solutions while growing as a versatile full-stack
           developer and creative technologist.
         </p>
-        <section class="timeline">
+        <section class="timeline autoShowRight">
           <div class="timeline-items">
             <!-- BTECH -->
             <div class="timeline-item">
@@ -156,7 +156,7 @@
     <!-- Skill Section -->
     <!-- =================================================================== -->
     <section class="skill vw90" id="skill">
-      <div class="skills-title">
+      <div class="skills-title autoShow">
         <h1>my <b>SKILLS</b></h1>
         <p>
           Passionate Full Stack Developer with expertise in building scalable,
@@ -166,7 +166,7 @@
       <!-- </section> -->
       <div class="skills-container">
         <!-- Programming -->
-        <div class="skill-card">
+        <div class="skill-card autoShowLeft">
           <div class="card-title">
             <h2>Programming Languages</h2>
           </div>
@@ -217,7 +217,7 @@
           </div>
         </div>
         <!-- Technical Expertise  -->
-        <div class="skill-card middle-card">
+        <div class="skill-card middle-card autoShow">
           <div class="card-title">
             <h2>Technical Expertise</h2>
           </div>
@@ -243,7 +243,7 @@
           </div>
         </div>
         <!-- Language skill  -->
-        <div class="skill-card">
+        <div class="skill-card autoShowRight">
           <div class="card-title">
             <h2>Professional Skills</h2>
           </div>
@@ -328,14 +328,14 @@
     <!-- Project Section -->
     <!-- =================================================================== -->
     <section class="project vw90" id="project">
-      <div class="secHead">
+      <div class="secHead autoShow">
         <h1>my <b>Project's</b></h1>
         <p>An innovative project combining creativity, precision, and thoughtful problem-solving. Focused on strong
           visual
           storytelling and structured execution. Created to inspire and provide real-world value.</p>
       </div>
-      <div class="secContainer">
-        <div class="card">
+      <div class="secContainer autoShow">
+        <div class="card autoShow">
           <h2>Web Design</h2>
           <img src="/assets/todo.png" alt="web design">
           <p><a href="https://todo.munakousalya.online/" target="_blank"><i class="fa-solid fa-globe"></i> <b>ToDo PWA
@@ -344,7 +344,7 @@
             accessibility. <br><b>Tech Stack:</b>
             HTML • CSS • JavaScript</p>
         </div>
-        <div class="card">
+        <div class="card autoShowLeft">
           <h2>Web Design</h2>
           <img src="/assets/weather.png" alt="web design">
           <p><a href="https://weather.munakousalya.online/" target="_blank"><i class="fa-solid fa-globe"></i> <b>weather
@@ -354,7 +354,7 @@
 
             HTML • CSS • JavaScript</p>
         </div>
-        <div class="card">
+        <div class="card autoShowRight">
           <h2>Web Design</h2>
           <img src="/assets/dictionary.png" alt="web design">
           <p><a href="https://dictionary.munakousalya.online/" target="_blank"><i class="fa-solid fa-globe"></i>
@@ -365,7 +365,7 @@
             HTML • CSS • JavaScript
           </p>
         </div>
-        <div class="card">
+        <div class="card autoShowRight">
           <h2>Web Design</h2>
           <img src="/assets/simongame.png" alt="web design">
           <p><a href="https://simongame.munakousalya.online/" target="_blank"><i class="fa-solid fa-globe"></i> <b>Simon
@@ -382,23 +382,23 @@
     <!-- =================================================================== -->
     <section class="service vw90" id="service">
       <div class="secHead">
-        <h1>my <b>Service</b></h1>
-        <p>Design and developing digital product that are simple,smart and inpactful.</p>
+        <h1 class="autoShowLeft">my <b>Service</b></h1>
+        <p class="autoShowRight">Design and developing digital product that are simple,smart and inpactful.</p>
       </div>
       <div class="secContainer">
-        <div class="card">
+        <div class="card autoShowLeft">
           <h2>Web Design</h2>
           <img src="/assets/web design.jpg" alt="web design">
           <p><b>Designing modern, responsive and user-friendly websites with clean UI, smooth user experience and
               optimized performance for all devices.</b></p>
         </div>
-        <div class="card">
+        <div class="card autoShow">
           <h2>App Design</h2>
           <img src="/assets/app development.jpg" alt="app design">
           <p><b>Building fast and beautiful cross-platform Flutter applications with intuitive interfaces, scalable
               architecture and seamless user experience.</b></p>
         </div>
-        <div class="card">
+        <div class="card autoShowRight">
           <h2>3D Design</h2>
           <img src="/assets/3d design.jpg" alt="3D design">
           <p><b>Creating realistic and visually appealing 3D interior designs with detailed modeling, lighting and
@@ -410,12 +410,12 @@
     <!-- contact Section -->
     <!-- =================================================================== -->
     <section class="contact vw90" id="contact">
-      <h1>Have an Awsome Project,Idea <br><b>Let's Discus</b></h1>
+      <h1 class="autoShow">Have an Awsome Project,Idea <br><b class="autoShow">Let's Discus</b></h1>
       <form action="" id="contact-form">
-        <input type="text" name="name" placeholder="Enter your full Name.." required>
-        <input type="email" name="email" placeholder="Enter your Email ID.." required>
-        <textarea name="message" placeholder="Enter your query.." rows="5" cols="30" required></textarea>
-        <div class="btnContainer">
+        <input type="text" name="name" placeholder="Enter your full Name.." required class="autoShowLeft">
+        <input type="email" name="email" placeholder="Enter your Email ID.." required class="autoShowRight">
+        <textarea name="message" placeholder="Enter your query.." rows="5" cols="30" required class="autoShowLeft"></textarea>
+        <div class="btnContainer autoShowRight">
           <input type="tel" name="phone" placeholder="Enter Phone no" maxlength="10" pattern="[0-9]{10}" id="phone">
           <button type="submit" class="sendbtn">Send</button>
         </div>
@@ -432,7 +432,7 @@
   <!-- ===================================================================== -->
   <footer>
     <div class="footer">
-      <div class="footerHead">
+      <div class="footerHead autoShow">
         <h1>Let's connect there</h1>
         <a href="#contact">
           <button class="hirebtn">Hire Me</button>
@@ -440,7 +440,7 @@
       </div>
       <hr>
       <div class="footerMid">
-        <div class="card1">
+        <div class="card1 autoShowLeft">
           <a href="#hero"><img src="/assets/logo.png" alt="footer logo"></a>
           <p>Crafting clean design and scalable digital solutions.
             Passionate about development, creativity, and
@@ -458,11 +458,11 @@
                 class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
-        <div class="card2">
+        <div class="card2 autoShowRight">
           <h3>Contact</h3>
           <a
-            href="mailto:blacksdevil2004@gmail.com?subject=HiringInquiry&body=Hello%20Muna,%20I%20want%20to%20hire%20you.">
-            <i class="fa-solid fa-envelope"></i>blacksdevil2004@gmail.com</a>
+            href="#contact">
+            <i class="fa-solid fa-envelope"></i>developermuna@gmail.com</a>
           <a href="tel:919040405798"><i class="fa-solid fa-phone"></i> 9040405798</a>
           <a href="https://interior.munakousalya.online"><i class="fa-solid fa-globe"></i> Interior Design</a>
         </div>
