@@ -92,3 +92,48 @@ themes.forEach(theme => {
 
   });
 });
+
+// =============================================================================
+// Email js logic
+// =============================================================================
+const API_KEY = "XktT6LTmiWxXV-9TU";
+const SERVICE_KEY = "service_e5l3ux7";
+emailjs.init(API_KEY);
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    // Send message to YOU
+    emailjs.sendForm(
+        SERVICE_KEY,
+        "template_ivk63df",
+        this
+    )
+
+    .then(() => {
+
+        // Send auto reply to visitor
+        emailjs.sendForm(
+           SERVICE_KEY,
+            "template_f12r7kc",
+            this
+        );
+
+        alert("Message Sent Successfully ✅");
+
+        form.reset();
+
+    })
+
+    .catch((error) => {
+
+        alert("Failed ❌");
+
+        console.log(error);
+
+    });
+
+});

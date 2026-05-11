@@ -411,13 +411,13 @@
     <!-- =================================================================== -->
     <section class="contact vw90" id="contact">
       <h1>Have an Awsome Project,Idea <br><b>Let's Discus</b></h1>
-      <form action="#">
+      <form action="" id="contact-form">
         <input type="text" name="name" placeholder="Enter your full Name.." required>
         <input type="email" name="email" placeholder="Enter your Email ID.." required>
         <textarea name="message" placeholder="Enter your query.." rows="5" cols="30" required></textarea>
         <div class="btnContainer">
           <input type="tel" name="phone" placeholder="Enter Phone no" maxlength="10" pattern="[0-9]{10}" id="phone">
-          <button class="sendbtn">Send</button>
+          <button type="submit" class="sendbtn">Send</button>
         </div>
       </form>
     </section>
@@ -475,7 +475,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 
